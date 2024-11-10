@@ -1,0 +1,45 @@
+h1{
+    text-align: center;
+    color: #fcf7f7;
+}
+.navbar ul{
+    list-style-type: none ;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(10, 9, 8);
+    overflow: hidden;
+}
+
+
+    
+
+.navbar a{
+    color: aliceblue;
+    width: 150px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-right: 2px dashed rgb(246, 243, 243);
+}
+.navbar a:hover{
+    background-color: rgb(190, 93, 214);
+
+}
+.navbar li{
+    float: left;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fcf7f7;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    border-color: black;
+    
+}

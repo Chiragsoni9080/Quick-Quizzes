@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics MCQ Quiz</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #82cd82, #e3e377, #d07979, #7adede, lightblue);
+            background-size: 200% 100%;
+            animation: gradientAnimation 15s linear infinite;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+            color: white;
+            overflow-y: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options {
+            margin-left: 20px;
+        }
+
+        .options input {
+            margin-right: 10px;
+        }
+
+        #b2 {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #b2:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .correct-answer { color: #00ff00; }
+        .incorrect-answer { color: #ff0000; }
+
+        #b1 {
+            background-color: #3db03d;
+            padding: 5px;
+            border-radius: 10px;
+            float: left;
+        }
+        .container {
+            max-height: 90vh; /* Allows room to scroll without hiding content */
+            overflow-y: auto;
+        }
+        
+
+        #b1:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="b1">
+            <a href="home.html" style="text-decoration: none; color: aliceblue">Back to Home</a>
+        </button>
+        <h1>Physics MCQ Quiz</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What is the unit of Force?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> A) Newton</label><br>
+                    <label><input type="radio" name="q1" value="b"> B) Joule</label><br>
+                    <label><input type="radio" name="q1" value="c"> C) Watt</label><br>
+                    <label><input type="radio" name="q1" value="d"> D) Pascal</label>
+                </div>
+                <p class="feedback" id="feedback1"></p>
+            </div>
+            
+            <div class="question">
+                <p>2. What is the speed of light in a vacuum?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> A) 3x10^8 m/s</label><br>
+                    <label><input type="radio" name="q2" value="b"> B) 1x10^6 m/s</label><br>
+                    <label><input type="radio" name="q2" value="c"> C) 5x10^7 m/s</label><br>
+                    <label><input type="radio" name="q2" value="d"> D) 2x10^9 m/s</label>
+                </div>
+                <p class="feedback" id="feedback2"></p>
+            </div>
+
+            <div class="question">
+                <p>3. What is Planck's constant (h) used for?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> A) Determining photon energy</label><br>
+                    <label><input type="radio" name="q3" value="b"> B) Measuring mass</label><br>
+                    <label><input type="radio" name="q3" value="c"> C) Defining temperature</label><br>
+                    <label><input type="radio" name="q3" value="d"> D) Calculating distance</label>
+                </div>
+                <p class="feedback" id="feedback3"></p>
+            </div>
+
+            <div class="question">
+                <p>4. Which of the following particles has no charge?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> A) Proton</label><br>
+                    <label><input type="radio" name="q4" value="b"> B) Electron</label><br>
+                    <label><input type="radio" name="q4" value="c"> C) Neutron</label><br>
+                    <label><input type="radio" name="q4" value="d"> D) Positron</label>
+                </div>
+                <p class="feedback" id="feedback4"></p>
+            </div>
+
+            <div class="question">
+                <p>5. What is the SI unit of electric charge?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> A) Coulomb</label><br>
+                    <label><input type="radio" name="q5" value="b"> B) Farad</label><br>
+                    <label><input type="radio" name="q5" value="c"> C) Ampere</label><br>
+                    <label><input type="radio" name="q5" value="d"> D) Ohm</label>
+                </div>
+                <p class="feedback" id="feedback5"></p>
+            </div>
+
+            <div class="question">
+                <p>6. What is the formula for kinetic energy?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="a"> A) mv^2</label><br>
+                    <label><input type="radio" name="q6" value="b"> B) (1/2)mv</label><br>
+                    <label><input type="radio" name="q6" value="c"> C) (1/2)mv^2</label><br>
+                    <label><input type="radio" name="q6" value="d"> D) m^2v</label>
+                </div>
+                <p class="feedback" id="feedback6"></p>
+            </div>
+
+            <div class="question">
+                <p>7. What is the gravitational constant (G)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="a"> A) 6.67x10^-11 Nm²/kg²</label><br>
+                    <label><input type="radio" name="q7" value="b"> B) 9.8 m/s²</label><br>
+                    <label><input type="radio" name="q7" value="c"> C) 1.6x10^-19 Nm</label><br>
+                    <label><input type="radio" name="q7" value="d"> D) 3x10^8 Nm/kg</label>
+                </div>
+                <p class="feedback" id="feedback7"></p>
+            </div>
+
+            <div class="question">
+                <p>8. Which law states that “Every action has an equal and opposite reaction”?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="a"> A) Newton's First Law</label><br>
+                    <label><input type="radio" name="q8" value="b"> B) Newton's Second Law</label><br>
+                    <label><input type="radio" name="q8" value="c"> C) Newton's Third Law</label><br>
+                    <label><input type="radio" name="q8" value="d"> D) Law of Gravitation</label>
+                </div>
+                <p class="feedback" id="feedback8"></p>
+            </div>
+
+            <div class="question">
+                <p>9. What is the formula for calculating momentum?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="a"> A) Force x distance</label><br>
+                    <label><input type="radio" name="q9" value="b"> B) Mass x velocity</label><br>
+                    <label><input type="radio" name="q9" value="c"> C) Mass x acceleration</label><br>
+                    <label><input type="radio" name="q9" value="d"> D) Force / distance</label>
+                </div>
+                <p class="feedback" id="feedback9"></p>
+            </div>
+
+            <div class="question">
+                <p>10. Who is known as the father of modern physics?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="a"> A) Isaac Newton</label><br>
+                    <label><input type="radio" name="q10" value="b"> B) Albert Einstein</label><br>
+                    <label><input type="radio" name="q10" value="c"> C) Galileo Galilei</label><br>
+                    <label><input type="radio" name="q10" value="d"> D) Nikola Tesla</label>
+                </div>
+                <p class="feedback" id="feedback10"></p>
+            </div>
+
+            <button id="b2" type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        const answers = {
+            q1: 'a',
+            q2: 'a',
+            q3: 'a',
+            q4: 'c',
+            q5: 'a',
+            q6: 'c',
+            q7: 'a',
+            q8: 'c',
+            q9: 'b',
+            q10: 'b'
+        };
+
+        function submitQuiz() {
+            let score = 0;
+            const totalQuestions = Object.keys(answers).length;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const userAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                const correctAnswer = answers[`q${i}`];
+                const feedbackElement = document.getElementById(`feedback${i}`);
+
+                if (userAnswer) {
+                    if (userAnswer.value === correctAnswer) {
+                        score++;
+                        feedbackElement.innerHTML = `<span class="correct-answer">Correct! The answer is ${correctAnswer.toUpperCase()}</span>`;
+                    } else {
+                        feedbackElement.innerHTML = `<span class="incorrect-answer">Incorrect. The correct answer is ${correctAnswer.toUpperCase()}</span>`;
+                    }
+                } else {
+                    feedbackElement.innerHTML = `<span class="incorrect-answer">No answer selected. The correct answer is ${correctAnswer.toUpperCase()}</span>`;
+                }
+            }
+
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = `<h3>Your Final Score: ${score}/${totalQuestions}</h3>`;
+        }
+    </script>
+</body>
+</html>

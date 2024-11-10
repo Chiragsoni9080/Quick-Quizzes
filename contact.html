@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact.us </title>
+
+    <style>
+        /* Basic styling for the navigation */
+        body {
+            background-color: rgb(87, 90, 94);
+            color: white;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to right,#82cd82, #e3e377, #d07979, #7adede, lightblue);
+            background-size: 200% 100%; /* Double the width for smooth animation */
+            animation: gradientAnimation 10s linear infinite;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: transparent;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 10px;
+            border-radius: 50px;
+            
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+        }
+
+        /* Hover effect for dropdown */
+        .navbar ul li:hover > ul {
+            display: block;
+        }
+
+        /* Hide dropdown items initially */
+        .navbar ul li ul {
+            display: none;
+            position: absolute;
+            background-color: rgb(45, 45, 45);
+            padding: 0;
+            list-style-type: none;
+            min-width: 100px;
+            
+        }
+
+        .navbar ul li ul li {
+            display: block;
+        }
+
+        .navbar ul li ul li a {
+            padding: 10px;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        /* Styling for hover effect on dropdown items */
+        .navbar ul li ul li a:hover {
+            background-color: rgb(68, 68, 68);
+        }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+        h1{
+            color: black;
+        }
+        #contact {
+            background: linear-gradient(to right, #82cd82, #e3e377, #d07979, #7adede, lightblue);
+            background-size: 200% 100%;
+            animation: gradientAnimation 10s linear infinite;
+            padding: 50px 20px;
+            border-radius: 50px;
+            border-color: black;
+        }
+        img{
+            border-radius: 50px;
+        }
+        #div1{
+            border-style: double;
+            width: 500px;
+            background-color: #82cd82;
+            color:  black;
+            padding: 5px;
+        }
+        
+       
+        
+        
+    </style>
+</head>
+<body>
+    <center>
+    <h1>WELCOME TO QUICK QUIZS</h1>
+    </center>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a href="#">Subjects</a>
+                <ul>
+                    <li><a href="/Html/Phyiscs.html">Physics</a></li>
+                    <li><a href="/Chemistry.html">Chemistry</a></li>
+                    <li><a href="/Maths.html">Maths</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav><br>
+<center>
+    <div id="div1">
+    <section id="contact">
+        <h2 style="text decorination: none; color: black">Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required><br><br>
+            <input type="email" id="email" placeholder="Your Email" required><br><br>
+            <textarea id="message" placeholder="Your Message" required></textarea><br
+                        <!-- Other form fields here -->
+                <button type="submit" >Send Message</button>
+        </form>
+    </section>
+    </div>
+    </center>
+</body>
+</html>

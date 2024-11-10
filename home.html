@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirag Soni</title>
+
+    <style>
+        /* General Body Styling */
+        body {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to right, #82cd82, #e3e377, #d07979, #7adede, lightblue);
+            background-size: 200% 100%;
+            animation: gradientAnimation 10s linear infinite;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        h1, h2 {
+            color: black;
+            text-align: center;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: 490px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+        }
+
+        /* Dropdown Hover */
+        .navbar ul li:hover > ul {
+            display: block;
+        }
+
+        .navbar ul li ul {
+            display: none;
+            position: absolute;
+            background-color: rgb(45, 45, 45);
+            padding: 0;
+            list-style-type: none;
+            min-width: 100px;
+            border-radius: 5px;
+        }
+
+        .navbar ul li ul li a:hover {
+            background-color: rgb(68, 68, 68);
+        }
+
+        /* Gradient Animation */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Login Container */
+        .login-container {
+            background-color: rgb(8, 9, 10);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(42, 40, 40, 0.1);
+            width: 300px;
+            margin: auto;
+            color: white;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+            border-collapse: collapse;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            animation: gradientAnimation 10s linear infinite;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #040f0d;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #fbf6f6;
+        }
+
+        .photo img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        #td{
+            color: black;
+
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1><b>~Welcome to My Quick Quizzes~</b></h1>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html"><b>Home</b></a></li>
+            <li>
+                <a href="#"><b>Subjects</b></a>
+                <ul>
+                    <li><a href="/Html/Phyiscs.html">Physics</a></li>
+                    <li><a href="/Html/Chemistry.html">Chemistry</a></li>
+                    <li><a href="/Html/Maths.html">Maths</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html"><b>Contact Us</b></a></li>
+        </ul>
+    </nav>
+    
+    <center>
+        <h1><b>Want to learn the best of JEE Quizzes?</b></h1>
+        <h2><b>You are at the best place</b></h2>
+        
+            <h2><b>Here you will find different methods to learn with quizzes</b></h2>
+        
+        <img src="./f7c78b88-c1a3-4593-9d7c-aa990f2de161.avif" height="300px" alt="Quiz Image"><br>
+    </center>
+
+    <center><br>
+        <div class="login-container">
+            <div id="div1">
+            <h2 style="color: white;">Login Now</h2>
+            </div>
+            <form id="loginForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="mobile">Mobile No.</label>
+                <input type="text" id="mobile" name="mobile" required>
+
+                <label for="email">Email ID</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+                <p id="error-message" class="error"></p>
+            </form>
+        </div>
+    </center><br>
+
+    <center>
+        <h1>~What Parents Are Saying~</h1>
+    </center>
+    <table>
+        <tr>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Sentence</th>
+        </tr>
+        <tr>
+            <td class="photo"><img src="./f7c78b88-c1a3-4593-9d7c-aa990f2de161.avif" alt="User Photo"></td>
+            <td><b>Shivay, Parent</b></td>
+            <td><b>"I am so happy my child is learning through this website. The interactive quizzes have really improved my child's interest in studies."</b></td>
+        </tr>
+        <tr>
+            <td class="photo"><img src="./download.jpg" alt="User Photo"></td>
+            <td><b>Sneha, Parent</b></td>
+            <td><b>"This website has made learning fun for my daughter! She looks forward to every session and is always eager to participate."</b></td>
+        </tr>
+    </table>
+    <hr><hr>
+
+</body>
+</html>
